@@ -1,0 +1,17 @@
+<section class="row" style="display: flex; justify-content: center;">
+    <%= if @keith_logic do %>
+      <button phx-click="normal-logic" phx-disable-with="Sobering up...">How time actually works</button>
+    <% else %>
+      <button phx-click="keith-logic" phx-disable-with="Drinking a beer...">Keith's Logic</button>
+    <% end %>
+</section>
+
+<section class="phx-hero">
+  <%= if @keith_logic do %>
+    <i>"Weekends don't count so that makes it 7</br>And we are taking off early on Thursday so it's basically 6 days"</br></i>
+    - Keith
+    </br>
+    </br>
+  <% end %>
+  <h1><%= @countdown.days %> Days <%= @countdown.hours %>:<%= @countdown.minutes %>:<%= @countdown.seconds %></h1>
+</section>
