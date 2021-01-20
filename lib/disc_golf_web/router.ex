@@ -18,6 +18,7 @@ defmodule DiscGolfWeb.Router do
     pipe_through :browser
 
     live "/", PageLive, :index
+    live "/countdown", PageLive, :index
   end
 
   # Other scopes may use custom stacks.
