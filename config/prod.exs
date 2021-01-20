@@ -11,7 +11,8 @@ use Mix.Config
 # before starting your production server.
 config :disc_golf, DiscGolfWeb.Endpoint,
   url: [host: "example.com", port: 80],
-  cache_static_manifest: "priv/static/cache_manifest.json"
+  cache_static_manifest: "priv/static/cache_manifest.json",
+  live_view: [signing_salt: {:system, "LIVEVIEW_SIGNING_SALT"}]
 
 # Do not print debug messages in production
 config :logger, level: :info
